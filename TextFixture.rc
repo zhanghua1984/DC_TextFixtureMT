@@ -1,0 +1,565 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TextFixture.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\TextFixture.ico"
+IDI_ICONRED             ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICONGREEN           ICON    DISCARDABLE     "res\\ico00001.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 480, 315
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 TextFixture"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "TextFixture 1.2 版: 2012 .11.2",IDC_STATIC,10,35,121,8,
+                    SS_NOPREFIX
+    LTEXT           "版权所有(C ) 2012  BCDS",IDC_STATIC,10,10,120,8
+    DEFPUSHBUTTON   "确定",IDOK,333,220,50,14,WS_GROUP
+    LTEXT           "Software Developer ：张华  刘远征",IDC_STATIC,10,20,133,
+                    8
+    LTEXT           "3、增加码间隙",IDC_STATIC,10,96,53,8,SS_NOPREFIX
+    LTEXT           "1、新增多个确认按钮",IDC_STATIC,10,54,77,8,SS_NOPREFIX
+    LTEXT           "2、增加限速功能",IDC_STATIC,10,75,61,8,SS_NOPREFIX
+    LTEXT           "4、调整档位变化",IDC_STATIC,10,117,61,8,SS_NOPREFIX
+    LTEXT           "5、调整速度绘图位置",IDC_STATIC,10,138,77,8,SS_NOPREFIX
+    LTEXT           "6、增加INI文件读取校验功能",IDC_STATIC,10,158,105,8,
+                    SS_NOPREFIX
+    LTEXT           "7、增加日志保存功能",IDC_STATIC,11,178,77,8,SS_NOPREFIX
+    LTEXT           "8、增加返回信息确认功能",IDC_STATIC,11,198,93,8,
+                    SS_NOPREFIX
+    LTEXT           "9、修改发送码间隙",IDC_STATIC,7,217,69,8,SS_NOPREFIX
+END
+
+IDD_TEXTFIXTURE_DIALOG DIALOGEX 0, 0, 959, 590
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TextFixture"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "EB",IDC_STATIC,697,20,15,8
+    LTEXT           "制动7",IDC_STATIC,697,32,20,8
+    LTEXT           "制动6",IDC_STATIC,697,44,20,8
+    LTEXT           "制动5",IDC_STATIC,697,57,20,8
+    LTEXT           "制动4",IDC_STATIC,697,68,20,8
+    LTEXT           "制动3",IDC_STATIC,697,80,20,8
+    LTEXT           "制动2",IDC_STATIC,697,92,20,8
+    LTEXT           "制动1",IDC_STATIC,697,104,20,8
+    LTEXT           "空挡",IDC_STATIC,697,117,20,8
+    LTEXT           "牵引1",IDC_STATIC,697,129,20,8
+    LTEXT           "牵引2",IDC_STATIC,697,141,20,8
+    LTEXT           "牵引3",IDC_STATIC,697,153,20,8
+    LTEXT           "牵引4",IDC_STATIC,697,165,20,8
+    CONTROL         "Slider1",IDC_SLIDER_ACC,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT | TBS_TOP | WS_TABSTOP,722,14,
+                    25,165,WS_EX_CLIENTEDGE
+    LISTBOX         IDC_LIST_MSG_1,393,380,266,94,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "控制面板",IDC_STATIC,676,0,87,189
+    PUSHBUTTON      "读取INI数据",IDC_BUTTON_ROUTE,418,95,51,14
+    GROUPBOX        "列车状态指示:",IDC_STATIC,1,0,246,65
+    LISTBOX         IDC_LIST_MSG_2,676,380,266,94,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "运行信息：",IDC_STATIC,388,370,277,145
+    GROUPBOX        "操作信息：",IDC_STATIC,670,370,276,145
+    EDITTEXT        IDC_EDIT_SEPPD,66,380,55,15,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ACC,309,393,51,12,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "速度(KM/H)：",IDC_STATIC,10,385,49,8
+    GROUPBOX        "速度/里程",IDC_STATIC,0,370,248,72
+    LTEXT           "始发点：",IDC_STATIC,154,405,34,8
+    LTEXT           "总里程(M)：",IDC_STATIC,10,405,45,8
+    EDITTEXT        IDC_DIRECTOR,194,401,34,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DISTANCE,66,401,79,15,ES_AUTOHSCROLL
+    LTEXT           "运行方向：",IDC_STATIC,261,415,40,8
+    COMBOBOX        IDC_COMBO_DIR,309,415,51,35,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "一系：",IDC_STATIC,441,13,26,8
+    LTEXT           "二系：",IDC_STATIC,441,29,26,8
+    LTEXT           "前进/后退：",IDC_STATIC,257,379,45,8
+    COMBOBOX        IDC_COMBO_MOVE,309,375,51,63,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "头车",IDC_RADIOHEAD,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,258,435,42,13
+    CONTROL         "尾车",IDC_RADIOTRIAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,322,435,42,13
+    PUSHBUTTON      "全部励磁",IDC_BUTTONRELAYALLWORK,633,541,36,11
+    PUSHBUTTON      "全部失磁",IDC_BUTTONRELAYALLFAIL,633,560,35,11
+    CONTROL         "继电器1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,259,542,44,10
+    CONTROL         "继电器2",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,303,542,44,10
+    CONTROL         "继电器3",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,347,542,44,10
+    CONTROL         "继电器4",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,397,542,44,10
+    CONTROL         "继电器5",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,446,542,44,10
+    CONTROL         "继电器6",IDC_CHECK6,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,491,542,44,10
+    CONTROL         "继电器7",IDC_CHECK7,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,540,542,44,10
+    CONTROL         "继电器8",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,585,542,44,10
+    CONTROL         "继电器9",IDC_CHECK9,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,259,561,44,10
+    CONTROL         "继电器10",IDC_CHECK10,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,303,561,43,10
+    CONTROL         "继电器11",IDC_CHECK11,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,347,561,48,10
+    CONTROL         "继电器12",IDC_CHECK12,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,397,561,48,10
+    CONTROL         "继电器13",IDC_CHECK13,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,446,561,44,10
+    CONTROL         "继电器14",IDC_CHECK14,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,491,561,45,10
+    CONTROL         "继电器15",IDC_CHECK15,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,540,561,44,10
+    CONTROL         "继电器16",IDC_CHECK16,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,585,561,48,10
+    CONTROL         "ATO状态",IDC_CHECKATO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,259,49,44,10
+    CONTROL         "ATP1状态",IDC_CHECKATP1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,358,49,44,10
+    CONTROL         "ATP2状态",IDC_CHECKATP2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,304,49,44,10
+    CONTROL         "测速电机1",IDC_CHECKTECHOP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,259,8,53,10
+    CONTROL         "EB1",IDC_CHECKEB1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    32,9,28,10
+    LTEXT           "一系:",IDC_STATIC,8,9,23,10
+    LTEXT           "二系:",IDC_STATIC,8,23,23,10
+    LTEXT           "结果:",IDC_STATIC,8,37,23,10
+    CONTROL         "EB2",IDC_CHECKEB2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    32,23,28,10
+    CONTROL         "SIR",IDC_CHECKEBRESULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,32,37,28,10
+    CONTROL         "FSB1",IDC_CHECKFSB1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,9,32,10
+    CONTROL         "FSB2",IDC_CHECKFSB2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,23,32,10
+    CONTROL         "FSB",IDC_CHECKFSBRESULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,62,37,28,10
+    CONTROL         "RDER1",IDC_CHECKRDER1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,99,9,36,10
+    CONTROL         "RDER2",IDC_CHECKRDER2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,99,23,36,10
+    CONTROL         "RDER",IDC_CHECKRDERRUSULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,99,37,32,10
+    CONTROL         "LDER1",IDC_CHECKLDER1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,139,9,36,10
+    CONTROL         "LDER2",IDC_CHECKLDER2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,139,23,36,10
+    CONTROL         "LDER",IDC_CHECKLDERRESULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,139,37,32,10
+    CONTROL         "ZVR1",IDC_CHECKZVR1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,177,9,32,10
+    CONTROL         "ZVR2",IDC_CHECKZVR2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,177,23,32,10
+    CONTROL         "ZVR",IDC_CHECKZVRRESULT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,177,37,28,10
+    LTEXT           "其它状态:",IDC_STATIC,8,51,36,10
+    CONTROL         "TIR",IDC_CHECKTIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    177,51,28,10
+    GROUPBOX        "继电器状态:",IDC_STATIC,251,514,422,65
+    LTEXT           "阅读器偏移：",IDC_STATIC,11,128,52,8
+    GROUPBOX        "码间隙设置:",IDC_STATIC,419,0,250,65
+    EDITTEXT        IDC_EDITREADEROFFSET,65,126,58,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "毫米",IDC_STATIC,130,130,22,8
+    GROUPBOX        "设置:",IDC_STATIC,0,70,671,124
+    COMBOBOX        IDC_COMBOWHEEL,65,81,58,91,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "轮径选择：",IDC_STATIC,11,85,43,8
+    LTEXT           "巡航定速：",IDC_STATIC,13,99,43,8
+    EDITTEXT        IDC_EDITSETV,65,96,58,12,ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "千米/时",IDC_STATIC,130,100,30,8
+    LTEXT           "毫米",IDC_STATIC,130,85,26,10
+    LTEXT           "自动停车：",IDC_STATIC,11,113,43,8
+    EDITTEXT        IDC_EDITSETSTOP,65,111,58,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "米",IDC_STATIC,130,115,11,8
+    LTEXT           "加速度倍速:",IDC_STATIC,262,455,47,9
+    EDITTEXT        IDC_ACCTIMES,309,452,51,12,ES_AUTOHSCROLL
+    LTEXT           "倍",IDC_STATIC,364,453,16,8
+    LTEXT           "轨道选择:",IDC_STATIC,349,82,38,8
+    COMBOBOX        IDC_TRACKSELECT,349,95,59,207,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "无源APR1:",IDC_STATIC,207,127,39,8
+    LTEXT           "有源APR1:",IDC_STATIC,207,161,37,8
+    LTEXT           "无源APR2:",IDC_STATIC,207,144,37,8
+    LTEXT           "有源APR2:",IDC_STATIC,207,178,36,8
+    LTEXT           "载频:",IDC_STATIC,379,124,27,8
+    LTEXT           "码频:",IDC_STATIC,379,141,26,8
+    LTEXT           "码间隙码:",IDC_STATIC,379,158,37,8
+    LTEXT           "间隙位置:",IDC_STATIC,379,175,36,8
+    COMBOBOX        IDC_COMBOCARRIERFREQUENCY,420,122,37,113,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBOCODEFREQUNCEY,420,139,37,162,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_NPARP1,249,123,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_NPAPR2,249,140,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_PAPR1,249,157,39,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    EDITTEXT        IDC_PAPR2,249,174,39,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    EDITTEXT        IDC_CODECLEARANCE,420,156,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CODECLEARANCEDIS,420,173,37,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "保存数据",IDC_SAVEINIDATA,418,77,51,14
+    CONTROL         "",IDC_STATICPIC,"Static",SS_BLACKRECT,382,312,93,29
+    LTEXT           "车辆起始位：",IDC_STATIC,11,143,51,8
+    EDITTEXT        IDC_EDITSTART,65,141,58,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    NOT WS_TABSTOP
+    LTEXT           "米",IDC_STATIC,129,145,22,8
+    GROUPBOX        "自动驾驶:",IDC_STATIC,769,78,165,112
+    LTEXT           "无源APR1ID:",IDC_STATIC,289,126,44,8
+    LTEXT           "无源APR2ID:",IDC_STATIC,289,143,44,8
+    EDITTEXT        IDC_NPARP1ID,337,123,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_NPARP2ID,337,140,39,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "有源APR1ID:",IDC_STATIC,289,160,44,8
+    LTEXT           "有源APR2ID:",IDC_STATIC,289,177,44,8
+    EDITTEXT        IDC_NPARP1ID2,337,157,39,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    EDITTEXT        IDC_NPARP2ID2,337,174,39,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "APR偏移：",IDC_STATIC,11,158,45,8
+    EDITTEXT        IDC_APRSENDDISTANCE,65,156,58,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "米",IDC_STATIC,129,160,22,8
+    LTEXT           "码频偏移：",IDC_STATIC,11,173,41,8
+    EDITTEXT        IDC_FRUSENDDISTANCE,65,171,58,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "米",IDC_STATIC,129,174,22,8
+    LTEXT           "位置(M)：",IDC_STATIC,132,384,36,8
+    LTEXT           "档位显示：",IDC_STATIC,261,397,40,8
+    EDITTEXT        IDC_LOGICS,170,380,58,15,ES_AUTOHSCROLL
+    LTEXT           "首尾通信健康信号：",IDC_STATIC,258,29,74,8
+    PUSHBUTTON      "保存到INI",IDC_SAVEINIDATATOFILE,867,202,46,13,NOT 
+                    WS_VISIBLE | WS_DISABLED
+    LTEXT           "配置：",IDC_STATIC,482,91,24,8
+    CONTROL         "强电",IDC_READERPOWER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,514,92,29,8
+    CONTROL         "弱电",IDC_READERNOPOWER,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,555,92,29,8
+    CONTROL         "",IDC_MSCOMM1,"{648A5600-2C6E-101B-82B6-000000000014}",
+                    NOT WS_VISIBLE | WS_TABSTOP,921,197,25,25
+    GROUPBOX        "阅读器：",IDC_STATIC,473,77,116,114
+    LTEXT           "状态：",IDC_STATIC,482,101,24,8
+    LTEXT           "工作状态：",IDC_STATIC,481,114,40,9
+    EDITTEXT        IDC_WORKSTATUS,528,113,55,12,ES_AUTOHSCROLL
+    LTEXT           "阅读距离：",IDC_STATIC,481,128,40,9
+    LTEXT           "蜂鸣器：",IDC_STATIC,481,142,40,9
+    LTEXT           "射频信道：",IDC_STATIC,481,156,40,9
+    LTEXT           "门限电平：",IDC_STATIC,481,170,40,9
+    EDITTEXT        IDC_READDISTANCE,528,127,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BEEP,528,141,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CHANNEL,528,155,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RESTRICTV,528,169,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEALTH,333,26,42,12,ES_AUTOHSCROLL
+    LTEXT           "Hz",IDC_STATIC,380,28,11,8
+    CONTROL         "CHR1",IDC_RFR1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    214,9,27,10
+    CONTROL         "CHR2",IDC_RFR2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    214,23,27,10
+    CONTROL         "TIRR",IDC_TIRR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    214,37,27,10
+    CONTROL         "EUMR",IDC_EUMR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    214,51,27,10
+    PUSHBUTTON      "定速确认",IDC_BUTTONSETV,161,97,35,12
+    PUSHBUTTON      "停车确认",IDC_BUTTONAUTOSTOP,161,113,35,12
+    PUSHBUTTON      "偏移确认",IDC_BUTTONREADEROFFSET,161,129,35,12
+    PUSHBUTTON      "起始确认",IDC_BUTTONSTART,161,144,35,12
+    PUSHBUTTON      "ARP确认",IDC_BUTTONAPROFFSET,161,159,35,12
+    PUSHBUTTON      "码频确认",IDC_BUTTONCODEOFFSET,161,175,35,12
+    EDITTEXT        IDC_EDITSPEEDLIMIT,246,98,32,12,ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | ES_NUMBER
+    LTEXT           "速度限制:",IDC_STATIC,204,101,38,8
+    PUSHBUTTON      "限速确认",IDC_BUTTONLIMITV,291,97,48,12
+    EDITTEXT        IDC_EDITANTENNA,246,79,32,12,ES_AUTOHSCROLL | 
+                    ES_WANTRETURN | ES_NUMBER
+    LTEXT           "天线偏移:",IDC_STATIC,204,81,38,8
+    PUSHBUTTON      "天线确认",IDC_BUTTONANTENNA,291,79,48,12
+    GROUPBOX        "轨道:",IDC_STATIC,203,110,265,80
+    LTEXT           "首次刹车时间：",IDC_STATIC,776,91,61,8
+    LTEXT           "首次刹车距离：",IDC_STATIC,776,105,61,8
+    LTEXT           "刹车误差：",IDC_STATIC,776,175,56,8
+    EDITTEXT        IDC_FIRSTBREAKTIME,835,89,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FIRSTBREAKDISTANCE,835,105,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BREAKERROR,835,173,37,12,ES_AUTOHSCROLL
+    LTEXT           "秒",IDC_STATIC,878,91,10,8
+    LTEXT           "米",IDC_STATIC,878,105,10,8
+    LTEXT           "毫米",IDC_STATIC,878,175,18,8
+    LTEXT           "溜车时间：",IDC_STATIC,776,119,61,8
+    LTEXT           "溜车距离：",IDC_STATIC,776,133,61,8
+    LTEXT           "二次刹车时间：",IDC_STATIC,776,147,59,8
+    LTEXT           "二次刹车距离：",IDC_STATIC,776,161,59,8
+    EDITTEXT        IDC_SLIPBREAKTIME,835,120,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SLIPBREAKDISTANCE,835,134,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SECONDBREAKTIME,835,147,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SECONDBREAKDISTANCE,835,159,37,12,ES_AUTOHSCROLL
+    LTEXT           "保存路径: D:\\running.txt",IDC_STATIC,394,504,234,9
+    LTEXT           "保存路径:D:peration.txt",IDC_STATIC,674,505,174,8
+    LTEXT           "秒",IDC_STATIC,878,119,10,8
+    LTEXT           "秒",IDC_STATIC,878,147,10,8
+    LTEXT           "米",IDC_STATIC,878,133,10,8
+    LTEXT           "米",IDC_STATIC,878,161,10,8
+    LTEXT           "绝对位置(M)：",IDC_STATIC,10,423,54,8
+    EDITTEXT        IDC_POSTION,66,421,162,15,ES_AUTOHSCROLL
+    CONTROL         "测速电机2",IDC_CHECKTECHOP2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,320,8,52,10
+    CONTROL         "FSK1",IDC_FSK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    467,13,29,8
+    CONTROL         "测速电机1",IDC_TACHO1,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,515,13,50,8
+    CONTROL         "FSK2",IDC_FSK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    467,29,29,8
+    CONTROL         "测速电机2",IDC_TACHO2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,596,30,50,8
+    EDITTEXT        IDC_GAPS1,596,14,39,12,ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_PERSENT,550,28,25,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "KM/H",IDC_STATIC,641,15,17,8
+    LTEXT           "%",IDC_STATIC,581,30,8,8
+    PUSHBUTTON      "发送码间隙",IDC_SENDCODEGAPS,582,45,46,13
+    CONTROL         "超前",IDC_TACHOOVERHEAD,"Button",BS_AUTOCHECKBOX,515,30,
+                    30,8
+    CONTROL         "即时模式",IDC_GAPSMODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,607,95,46,8
+    EDITTEXT        IDC_GAPSTOPTIME,490,43,21,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "停止时间：",IDC_STATIC,443,45,41,8
+    GROUPBOX        "即时载频码频:",IDC_STATIC,593,78,78,114
+    PUSHBUTTON      "发送载频码频",IDC_SEND,603,171,61,13
+    LTEXT           "载频1",IDC_STATIC,599,111,23,8
+    LTEXT           "码频1",IDC_STATIC,599,125,23,8
+    LTEXT           "载频2",IDC_STATIC,599,139,23,8
+    LTEXT           "码频2",IDC_STATIC,599,153,23,8
+    LTEXT           "X10ms",IDC_STATIC,515,45,20,8
+    COMBOBOX        IDC_CARRAY1,623,109,45,207,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CODE1,623,123,45,207,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CARRAY2,623,137,45,207,CBS_DROPDOWN | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CODE2,623,151,45,207,CBS_DROPDOWN | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "EB失效",IDC_CHECKFSBEBENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,50,38,10
+    LTEXT           "Static",IDC_STATICCOM,9,444,239,13
+    LTEXT           "下位机软件版本号:",IDC_STATIC,772,5,71,8
+    LTEXT           "OMPM版本号:",IDC_STATIC,796,18,47,8
+    LTEXT           "ATPM版本号:",IDC_STATIC,796,31,47,8
+    LTEXT           "Static",IDC_STATICOMPM,848,31,94,8,NOT WS_GROUP
+    LTEXT           "Static",IDC_STATICATPM,848,18,94,8,NOT WS_GROUP
+    LTEXT           "上位机软件版本号:",IDC_STATIC,770,47,71,8
+    LTEXT           "1.2MT",IDC_STATIC,847,47,16,8,NOT WS_GROUP
+    CONTROL         "FSB失效",IDC_CHECKFSBENABLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,99,50,43,10
+    CONTROL         "保持",IDC_CHECKKEEPGAP,"Button",BS_AUTOCHECKBOX,633,47,
+                    27,9
+    CONTROL         "禁止显示状态信息",IDC_CHECKFORBIDSTATUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,457,80,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TextFixture Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TextFixture\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2012\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TextFixture.EXE\0"
+            VALUE "ProductName", "TextFixture 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 473
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_TEXTFIXTURE_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 952
+        BOTTOMMARGIN, 583
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIFUP               GIF     DISCARDABLE     "res\\up.gif"
+IDR_GIFUPMOVING         GIF     DISCARDABLE     "res\\upmoving.gif"
+IDR_GIFUPBACKMOVING     GIF     DISCARDABLE     "res\\upbackmoving.gif"
+IDR_GIFDOWN             GIF     DISCARDABLE     "res\\down.gif"
+IDR_GIFDOWNMOVING       GIF     DISCARDABLE     "res\\downmoving.gif"
+IDR_GIFDOWNBACKMOVING   GIF     DISCARDABLE     "res\\downbackmoving.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TEXTFIXTURE_DIALOG DLGINIT
+BEGIN
+    IDC_MSCOMM1, 0x376, 102, 0
+0x0013, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0034, 0x0020, 0x4321, 0x1234, 0x0008, 0x0000, 0x03ed, 0x0000, 
+0x03ed, 0x0000, 0x5601, 0x648a, 0x0000, 0x0006, 0x0000, 0x0001, 0x0400, 
+0x0000, 0x0200, 0x0000, 0xc200, 0x0001, 0x0000, 0x0008, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x003f, 0x0000, 0x0001, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 TextFixture(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\TextFixture.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
